@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const home = require('../controllers/orgs')
+const orgs = require('../controllers/orgs')
 
 router.get('/', orgs.getOrgs)
 

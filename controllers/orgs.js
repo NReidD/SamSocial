@@ -1,7 +1,7 @@
-const orgs = require('../../models/orgs');
+const orgs = require('../models/orgs');
 
 module.exports.getOrgs = async (req, res,next) => {
 
-res.render('')
+res.render('samsocial/orgs')
 
 }
