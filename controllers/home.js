@@ -1,4 +1,4 @@
 
 module.exports.getHome = (req, res) => {
-    res.render('salsmedia/home')
+    res.render('samSocial/home')
 }
