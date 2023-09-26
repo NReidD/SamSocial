@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const { Schema } = mongoose
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 
 const listSchema = new Schema({
@@ -12,5 +12,5 @@ const listSchema = new Schema({
     Questions: [String]
 })
 
-const Listings = mongoose.model('Listings', listSchema)
+const Listings = mongoose.model('Listings', listSchema);
 module.exports = Listings;
