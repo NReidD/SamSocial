@@ -15,21 +15,42 @@ header {
 }
 
 .header-image-button {
-  /* Make images fit into the header properly */
   padding: 0;
-  height: 70%;
-  background-color: transparent;
+  height: 100%;
   border: none;
-  margin: calc(6vw * .1); /* Make the button/image fit inside the header properly */
 }
 
 .header-image-button img {
-  height: 100%;
+  /* Make images fit into the header properly */
+  height: 70%;
+  margin: calc(6vw * 0.1);
 }
 
-.header-left a {
-  margin-left: 3vw;
+header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 12vw;
+  height: 6vh;
   color: #000000;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+/* //// Fix this!!\ */
+.header-right a {
+  float: right;
+}
+
+header a, header button {
+  background-color: transparent;
+  cursor: pointer; /* Cursor styling */
+  transition: background-color 0.2s linear;
+}
+
+header a:hover, header button:hover {
+  background-color: rgba(0, 0, 0, 0.25);
 }
