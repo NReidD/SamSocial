@@ -1,69 +1,35 @@
-/* Reset some default styles */
-body, h1, h2, p {
+body {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
-}
-
+/* Header stuff */
 header {
-  background-color: #333;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-nav {
-  background-color: #333;
-}
-
-nav ul {
-  list-style-type: none;
+  background-color: #aaeffd;
+  height: 6vh;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  padding: 10px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 3px solid black;
 }
 
-nav li {
-  margin: 0 10px;
+.header-image-button {
+  /* Make images fit into the header properly */
+  padding: 0;
+  height: 70%;
+  background-color: transparent;
+  border: none;
+  margin: calc(6vw * .1); /* Make the button/image fit inside the header properly */
 }
 
-nav a {
+.header-image-button img {
+  height: 100%;
+}
+
+.header-left a {
+  margin-left: 3vw;
+  color: #000000;
   text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
+  font-size: 1.5vw;
 }
-
-nav a:hover {
-  color: #00b4d8;
-}
-
-main {
-  padding: 20px;
-}
-
-.post {
-  background-color: #444;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-footer {
-  background-color: #333;
-  text-align: center;
-  padding: 10px;
-  bottom: 0px;
-  position: absolute;
-  width: 98%;
-}
-
-/* Add your custom styles below this line */
-/* For example, you can style posts, buttons, or any other elements specific to your application */
-

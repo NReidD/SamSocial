@@ -1,0 +1,3 @@
+- Responsive heart button (hover, etc)
+- Change the font plz
+- Right side of header
