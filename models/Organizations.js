@@ -11,10 +11,7 @@ const orgSchema = new Schema({
     Posts: [ObjectId],
     rating: [{Number, ObjectId}],
     Listings: [ObjectId],
-    Membrers: [ObjectId],
-    Admins: [ObjectId],
-    Joined: String,
-    Reviews: [{ObjectId, Number}]
+    Joined: String
 
 })
 
