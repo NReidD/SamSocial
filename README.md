@@ -9,6 +9,6 @@ A project for the [Congressional App Challenge](https://www.congressionalappchal
 - [x] Change the font plz
 - [x] Right side of header
 - [x] Add *beautiful* README.md file for branch `tyler`
-- [X] Add in splash content
+- [ ] Add in splash content
 - [ ] Add main content
 - [ ] Replace ALL images
