@@ -7,16 +7,16 @@ const orgSchema = new Schema({
     Category: String,
     Bio: String,
     Founded: String,
-    ProfilePicture: String,
-    Posts: [ObjectId],
-    rating: [{Number, ObjectId}],
-    Listings: [ObjectId],
-    Membrers: [ObjectId],
-    Admins: [ObjectId],
     Joined: String,
-    Reviews: [{ObjectId, Number}]
+    ProfilePicture: String,
+    Posts: [
+        {
+            ref: 'Post',
+            type: Schema.Types.ObjectId
+        }
+    ],
 
 })
 
-const Organizations = mongoose.model('Organizations', orgSchema);
-module.exports = Organizations;
+const Organization = mongoose.model('Organization', orgSchema);
+module.exports = Organization;
