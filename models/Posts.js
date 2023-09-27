@@ -8,5 +8,5 @@ const postSchema = new Schema({
     Caption: String
 })
 
-const Posts = mongoose.model('Posts', postSchema);
-module.exports = Posts;
+const Post = mongoose.model('Post', postSchema);
+module.exports = Post;
