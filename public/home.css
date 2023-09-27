@@ -68,3 +68,28 @@ header a:hover, header button:hover {
 /* End header */
 
 /* Begin splash content */
+
+.splash-image {
+  width: 100vw;
+  height: 40vw;
+  object-fit: cover;
+}
+
+.splash-h1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25vh;
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 4.5vw;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+/* End splash content */
+
+/* Begin whatever comes next */
