@@ -1,9 +1,11 @@
+/* Generic */
+
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Header stuff */
+/* Begin header */
 header {
   background-color: #aaeffd;
   height: 6vh;
@@ -12,6 +14,10 @@ header {
   align-items: center;
   width: 100%;
   border-bottom: 3px solid black;
+}
+
+.header-left, .header-right {
+  height: 6vh;
 }
 
 .header-image-button {
@@ -40,9 +46,13 @@ header a {
   font-family: Verdana, sans-serif;
 }
 
-/* //// Fix this!!\ */
 .header-right a {
-  float: right;
+  width: 7vw;
+}
+
+.header-right {
+  right: 0;
+  position: absolute;
 }
 
 header a, header button {
@@ -54,3 +64,7 @@ header a, header button {
 header a:hover, header button:hover {
   background-color: rgba(0, 0, 0, 0.25);
 }
+
+/* End header */
+
+/* Begin splash content */
