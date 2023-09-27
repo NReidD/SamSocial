@@ -7,6 +7,7 @@ const orgSchema = new Schema({
     Category: String,
     Bio: String,
     Founded: String,
+    Joined: String,
     ProfilePicture: String,
     Posts: [
         {
@@ -14,7 +15,6 @@ const orgSchema = new Schema({
             type: Schema.Types.ObjectId
         }
     ],
-    Joined: String
 
 })
 
