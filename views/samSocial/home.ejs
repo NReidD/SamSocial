@@ -1,1 +1,64 @@
-<% layout('/views/samSocial/layout.ejs') -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <title>SamSocial</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <button class="header-image-button" onclick="alert('make this do something');">
+      <img src="images/global/heart.png">
+    </button>
+    <div class="header-left">
+      <a href="about">About</a>
+      <a href="partners">Partners</a>
+      <a href="join">Join</a>
+    </div>
+    <div class="header-right">
+      <a href="signup">Sign up</a>
+      <a href="login">Log in</a>
+      <button class="header-image-button" onclick="alert('make this do something too i guess');">
+        <img src="images/global/user-icon.png">
+      </button>
+    </div>
+  </header>
+
+  <!-- Splash content -->
+  <img src="images/home/splash.jpg" class="splash-image">
+  <h1 class="splash-h1">Samaritan Social</h1>
+
+  <!-- Feature Cards -->
+  <div class="feature-cards-container">
+    <div class="feature-card">
+      <img src="images/global/heart.png"> <!-- CHANGE THIS -->
+      <p>As a nonprofit, we are solely dedicated to doing something blah blah blah lorem ipsum or something</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/global/heart.png"> <!-- CHANGE THIS -->
+      <p>As a nonprofit, we are solely dedicated to doing something blah blah blah lorem ipsum or something</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/global/heart.png"> <!-- CHANGE THIS -->
+      <p>As a nonprofit, we are solely dedicated to doing something blah blah blah lorem ipsum or something</p>
+    </div>
+  </div>
+
+  <!-- Mission Statement -->
+  <div class="mission-statement">
+    <div class="mission-left">
+      <h1>Our mission</h1>
+      <p>Here at Samaritan Social, we believe that it is our mission to unite people and service organizations around the globe. We're going to need a nice, fat block of text here, so this is all just dummy text. Is this font too big? It's hard to tell, because I not only have chrome inspect element up half of the time, but also i'm on a super wide windows monitor. Okay yeah that was definitely too big. I should probably use this font for headers, and then change the font for this block of text. It looks good in the feature cards, though.<br>Line break?<br><br>dOuBlE lInE bReAk??<br><br>Not bad. Not bad at all.</p>
+      <p>Another P element = double line break</p>
+      <p style="float:right;">-The SamSocial Team</p>
+    </div>
+    <img src="/images/home/mission-statement.jpg">
+    <button onclick="alert('something here as well...')">Start today!</button>
+  </div>
+</div>
+</body>
+</html>
