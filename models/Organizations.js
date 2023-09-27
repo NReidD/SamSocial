@@ -8,9 +8,12 @@ const orgSchema = new Schema({
     Bio: String,
     Founded: String,
     ProfilePicture: String,
-    Posts: [ObjectId],
-    rating: [{Number, ObjectId}],
-    Listings: [ObjectId],
+    Posts: [
+        {
+            ref: 'Post',
+            type: Schema.Types.ObjectId
+        }
+    ],
     Joined: String
 
 })
