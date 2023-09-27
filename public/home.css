@@ -170,5 +170,25 @@ header a:hover, header button:hover {
   background-color: rgba(0, 0, 0, 0.35); /* Match the hover background color */
 }
 
-
 /* End mission Statement */
+
+/* Begin partners */
+
+.partners {
+  height: 70vh;
+  background-color: #5f929a;
+  justify-content: center;
+  display: flex;
+}
+
+.partners h1 {
+  height: 2vh;
+  margin: 34vh 0; /* 70 - 2  / 2 */
+  font-family: Verdana, sans-serif;
+  font-size: 2vw;
+  max-width: 100%;
+}
+
+/* End partners */
+
+/* Begin org-join */
