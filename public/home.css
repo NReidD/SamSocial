@@ -73,6 +73,7 @@ header a:hover, header button:hover {
   width: 100vw;
   height: 40vw;
   object-fit: cover;
+  vertical-align: middle;
 }
 
 .splash-h1 {
@@ -92,4 +93,54 @@ header a:hover, header button:hover {
 
 /* End splash content */
 
-/* Begin whatever comes next */
+/* Begin Feature Cards */
+.feature-cards-container {
+  /* min-height: 10vh; */
+  width: 100%;
+  background-color: #88cddc;
+  display: flex;
+}
+
+.feature-card {
+  width: 30vw;
+  min-height: 27vh;
+  margin: 3vw;
+  padding: 1vw;
+  background-color: white;
+  float: left;
+  text-align: center; /* Center image */
+}
+
+.feature-card p {
+  font-family: Verdana, sans-serif;
+  font-size: 1.75vh;
+  text-align: left; /* Un-center */
+}
+
+/* End Feature Cards */
+
+/* Begin Mission Statement */
+
+.mission-statement {
+  display: inline-block;
+  padding: 1vw;
+}
+
+.mission-left {
+  display: inline-block;
+  width: 60vw;
+}
+
+.mission-statement img {
+  float: right;
+  width: 40vw;
+  object-fit: cover;
+}
+
+.mission-left h1 {
+  font-family: Verdana, sans-serif;
+}
+
+.mission-left p {
+  font-family: Verdana, sans-serif;
+}

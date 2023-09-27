@@ -11,4 +11,19 @@ A project for the [Congressional App Challenge](https://www.congressionalappchal
 - [x] Add *beautiful* README.md file for branch `tyler`
 - [X] Add in splash content
 - [ ] Add main content
+- [ ] Replace the icons inside of the feature cards with simple, vector/png icons that match the text (e.g. a thumbs up, a heart, etc.). Preferably with blue/white theme.
 - [ ] Replace ALL images
+- [ ] Maybe add border to feature cards
+
+
+## To-do list for branch `andrew`
+
+- [X] Example task
+
+- [ ] Example task 2
+
+## To-do list for branch `Nate`
+
+- [X] Example task
+
+- [ ] Example task 2
