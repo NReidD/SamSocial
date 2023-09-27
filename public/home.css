@@ -124,12 +124,10 @@ header a:hover, header button:hover {
 
 .mission-statement {
   display: inline-block;
-  background-color: lightgreen;
 }
 
 .mission-left {
-  margin: 3%;
-  margin-bottom: 0;
+  margin: 0 3%;
   display: inline-block;
   width: 54%; /* 60 - 6% (above) */
 }
@@ -152,5 +150,25 @@ header a:hover, header button:hover {
   font-size: 1.75vh;
   max-width: 75%;
 }
+
+.mission-statement button {
+  display: block;
+  margin: 2vh auto; /* Adjust margin as needed */
+  padding: 1vh 2vw; /* Adjust padding as needed */
+  background-color: #cdcdcd;
+  border: 2px solid #000000; /* Match the border style */
+  border-radius: 5px; /* Add rounded corners */
+  color: #000000;
+  font-size: 1.25vw; /* Match the font size */
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.mission-statement button:hover {
+  background-color: rgba(0, 0, 0, 0.35); /* Match the hover background color */
+}
+
 
 /* End mission Statement */
