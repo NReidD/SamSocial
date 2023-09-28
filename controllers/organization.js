@@ -1,16 +1,32 @@
-const express = require('express');
-const router = express.Router({mergeParams: true});
-const Orgs = require('../controllers/organization');
+const Orgs = require("../models/Organizations")
 
-//get/render organization dat
-router.get('/organizations/:orgId')
-//create new organization
-router.get('/organizations/:orgId/create')
-//post new organization
-router.post('/organizations/:orgId/create')
+module.exports.getOrg = async (req, res) => {
+    const query = req.query.category
+    const Organizations = await Orgs.find().sort({_id: -1}).limit(10)
+    res.render('samSocial/organizations/index', {Organizations, category: query})
 
+}
+module.exports.newOrg = async(req, res) => {
+const organization = new Orgs(req.body)
+    organization.date = format(new Date(), 'PPP')
+    organization.text = splitText(organization.text)
+    await organization.save()
+    res.redirect(`/samSocial/organizations/${organization._id}`)
+    }
+module.exports.getNewForm = async (req, res) => {
+    res.render('samSocial/organizations/new', {category: ''})
+    
+}
+module.exports.getEditForm = async (req, res) => {
+    const { orgId } = req.params
+    const org = Orgs.findById(orgID)
+   res.render('samSocial/organizations/edit', org)
+    } 
+module.exports.UpdateOrg = async (req, res) => 
 
-//send, post edit form for organization
-router.route('/organizations/:orgId/edit')
-.get(Orgs.getEdit)
-.post(Orgs.postEdit)
+{
+    const { orgId } = req.params
+    const org = await Orgs.findByIdAndUpdate(orgId, (req.body))
+    res.redirect(`/organizations/${org._id}`)
+
+}
