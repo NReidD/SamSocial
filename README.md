@@ -10,7 +10,7 @@ A project for the [Congressional App Challenge](https://www.congressionalappchal
 - [x] Right side of header
 - [x] Add *beautiful* README.md file for branch `tyler`
 - [X] Add in splash content
-- [X] Finish CSS for individual partner card
+- [X] Finish CSS for individual partner cards
 - [ ] Make CSS / CSS animations / JS for partner card scrolling
 - [ ] Add main content
 - [ ] Replace the icons inside of the feature cards with simple, vector/png icons that match the text (e.g. a thumbs up, a heart, etc.). Preferably with blue/white theme.
