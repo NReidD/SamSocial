@@ -16,4 +16,4 @@ router.route('/organizations/:orgId/edit')
 .post(Orgs.postEdit)
 
 
-module.export = router
+module.exports = router
