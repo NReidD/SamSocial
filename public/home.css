@@ -182,7 +182,7 @@ header a:hover, header button:hover {
   display: flex;
 }
 
-.partner {
+.partners-container > div {
   background-color: white;
   width: 40vw;
   height: 25vw;
