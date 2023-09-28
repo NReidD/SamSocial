@@ -219,7 +219,7 @@ header a:hover, header button:hover {
   left: 14%;
   z-index: 1;
 } .partner1 p, .partner5 p {
-  font-size: calc(1.35vw * (2/3));
+  font-size: calc(1.1vw * (2/3));
 } .partner1 h1, .partner5 h1 {
   font-size: calc(2vw * (2/3));
 } .partner2, .partner4 {
@@ -228,7 +228,7 @@ header a:hover, header button:hover {
   left: 20%;
   z-index: 2;
 } .partner2 p, .partner4 p {
-  font-size: calc(1.35vw * (4/5));
+  font-size: calc(1.1vw * (4/5));
 } .partner2 h1, .partner4 h1 {
   font-size: calc(2vw * (4/5));
 } .partner3 {
@@ -236,7 +236,7 @@ header a:hover, header button:hover {
   right: 0;
   z-index: 3;
 } .partner3 p {
-  font-size: 1.35vw;
+  font-size: 1.1vw;
 } .partner3 h1 {
   font-size: 2vw;
 } .partner4 {
