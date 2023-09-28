@@ -95,6 +95,7 @@ header a:hover, header button:hover {
 /* End splash content */
 
 /* Begin Feature Cards */
+
 .feature-cards-container {
   /* min-height: 10vh; */
   width: 100%;
@@ -170,5 +171,84 @@ header a:hover, header button:hover {
   background-color: rgba(0, 0, 0, 0.35); /* Match the hover background color */
 }
 
-
 /* End mission Statement */
+
+/* Begin partners */
+
+.partners-container {
+  height: 70vh;
+  background-color: #5f929a;
+  display: flex;
+  align-items: center;
+}
+
+.partner { /* Global rules */
+  background-color: white;
+  width: 40vw;
+  height: 25vw;
+  margin: 5vw; /* Maybe change later? */
+  padding: 1vw;
+  display: flex;
+  position: absolute;
+
+  border: 1px solid black;
+  border-radius: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partner-text {
+  margin-left: auto; /* Float right inside flexbox */
+  width: 60%;
+  display: table;
+}
+
+.partner img {
+  width: 30%;
+  object-fit: contain;
+}
+
+.partner p, .partner h1 {
+  font-family: Verdana, sans-serif;
+}
+
+.partner1, .partner5 {
+  width: calc(40vw * (2/3));
+  height: calc(25vw * (2/3));
+  left: 14%;
+  z-index: 1;
+} .partner1 p, .partner5 p {
+  font-size: calc(1.35vw * (2/3));
+} .partner1 h1, .partner5 h1 {
+  font-size: calc(2vw * (2/3));
+} .partner2, .partner4 {
+  width: calc(40vw * (4/5));
+  height: calc(25vw * (4/5));
+  left: 20%;
+  z-index: 2;
+} .partner2 p, .partner4 p {
+  font-size: calc(1.35vw * (4/5));
+} .partner2 h1, .partner4 h1 {
+  font-size: calc(2vw * (4/5));
+} .partner3 {
+  left: 0;
+  right: 0;
+  z-index: 3;
+} .partner3 p {
+  font-size: 1.35vw;
+} .partner3 h1 {
+  font-size: 2vw;
+} .partner4 {
+  left: auto;
+  right: 20%;
+} .partner5 {
+  left: auto;
+  right: 14%;
+}
+
+/* MAKE UNIVERSAL */
+
+/* End partners */
+
+/* Begin org-join */
