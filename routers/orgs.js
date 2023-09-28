@@ -12,7 +12,7 @@ router.post('/organizations/:orgId/create')
 
 //send, post edit form for organization
 router.route('/organizations/:orgId/edit')
-.get('/organizations/:orgId/edit')
-.post('/organizations/:orgId/edit')
+.get(Orgs.getEdit)
+.post(Orgs.postEdit)
 
 
