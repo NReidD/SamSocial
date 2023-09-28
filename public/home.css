@@ -95,6 +95,7 @@ header a:hover, header button:hover {
 /* End splash content */
 
 /* Begin Feature Cards */
+
 .feature-cards-container {
   /* min-height: 10vh; */
   width: 100%;
@@ -174,19 +175,40 @@ header a:hover, header button:hover {
 
 /* Begin partners */
 
-.partners {
+.partners-container {
   height: 70vh;
   background-color: #5f929a;
   justify-content: center;
   display: flex;
 }
 
-.partners h1 {
-  height: 2vh;
-  margin: 34vh 0; /* 70 - 2  / 2 */
+.partner {
+  background-color: white;
+  width: 40vw;
+  height: 25vw;
+  margin: 5vw; /* Maybe change later? */
+  padding: 1vw;
+  display: flex;
+}
+
+.partner p, .partner h1 {
   font-family: Verdana, sans-serif;
-  font-size: 2vw;
-  max-width: 100%;
+  font-size: 1.75vh;
+}
+
+.partner h1 {
+  font-size: 2vh;
+}
+
+.partner img {
+  width: 30%;
+  object-fit: contain;
+}
+
+.partner-text {
+  margin-left: auto; /* Float right inside flexbox */
+  width: 60%;
+  display: table;
 }
 
 /* End partners */
