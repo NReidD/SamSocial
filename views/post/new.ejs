@@ -1,29 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+    <html lang="en">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Post</title>
-</head>
-<body>
+    </head>
+    <body>
     <h1>New Post</h1>
     <form action="/organizations/placeholder/posts/new" method="POST">
-        <div>
-            <label for="title">Title</label>
-            <input type="text" name="Title" id="title" required>
-        </div>
+    <div>
+    <label for="title">Organization Name</label>
+    <input type="text" name="Title" id="title" required>
+    </div>
 
-        <div>
-            <label for="media">Media</label>
-            <input type="text" name="Media" id="media" required>
-        </div>
+    <div>
+    <label for="media">Organization Image</label>
+    <input type="text" name="ProfilePic" id="ProfilePic" required>
+    </div>
 
-        <div>
-            <label for="caption">Caption</label>
-            <input type="text" name="Caption" id="media" required>
-        </div>
+    <div>
+    <label for="caption">Organization Bio</label>
+    <input type="text" name="Bio" id="Bio" required>
+    </div>
+    <div>
+    <label for="caption">Organization Category</label>
 
-        <button>Create</button>
+    <select name="Category" id="Category" class="form-select" required>
+    <option value="World News">World News</option>
+    <option value="Sports">Sports</option>
+    <option value="Salesian Scoop">Salesian Scoop</option>
+    <option value="Student Spotlight">Student Spotlight</option>
+    <option value="Wellness">Wellness</option>
+    <option value="Entertainment">Entertainment</option>
+    <option value="Crossword">Crossword</option>
+    </select>
+    </div>
+    <div>
+    <label for="caption">Organization Founding Date</label>
+    <input type="text" name="Founded" id="Founded" required>
+    </div>
+
+
+    <button>Create</button>
     </form>
-</body>
-</html>
+    </body>
+    </html>
