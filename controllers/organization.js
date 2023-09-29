@@ -1,5 +1,5 @@
 const Orgs = require('../models/Organizations')
-
+const format = require('date-fns/format')
 module.exports.getNewForm = (req, res) => {
     res.render('orgs/new')
 }
@@ -16,6 +16,7 @@ module.exports.showOrgs = async (req, res) => {
 
 module.exports.createOrg = async (req, res) => {
     const org = new Orgs(req.body)
+    org.Founded = format(new Date(), 'PPP')
     await org.save()
     res.redirect(`/organizations/${org._id}`)
 }
