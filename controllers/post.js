@@ -13,6 +13,7 @@ module.exports.createPost = async (req, res) => {
 module.exports.getPost = async (req, res) => {
     const { postId } = req.params
     const post = await Post.findById(postId)
+    console.log('hello')
     res.render('post/show', { post })
 }
 
