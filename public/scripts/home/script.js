@@ -1,7 +1,9 @@
 // So something is... weird... here....
 
 window.onload = function() {
-  window.setInterval(scrollPartners, 5000);
+  // scrollPartners();
+  // window.setInterval(scrollPartners, 5000);
+  document.onclick = scrollPartners;
 }
 
 function scrollPartners() {

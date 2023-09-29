@@ -197,7 +197,7 @@ header a:hover, header button:hover {
   margin-left: auto;
   margin-right: auto;
 
-  transition: all 5s ease;
+  transition: all 2s ease;
 }
 
 .partner-text {
@@ -234,19 +234,16 @@ header a:hover, header button:hover {
 } .partner-2 h1, .partner-4 h1 {
   font-size: calc(2vw * (4/5));
 } .partner-3 {
-  left: 0;
-  right: 0;
+  left: calc(50% - 20vw); /* 50vw - (40 / 2) */
   z-index: 4;
 } .partner-3 p {
   font-size: 1.1vw;
 } .partner-3 h1 {
   font-size: 2vw;
 } .partner-4 {
-  left: auto;
-  right: 20%;
+  left: calc(70% - ((40vw * (4/5) / 2)));
 } .partner-5 {
-  left: auto;
-  right: 14%;
+  left: calc(86% - ((40vw * (2/3) / 2)));
 } .partner-6 {
   width: calc(40vw * (1/2));
   height: calc(25vw * (1/2));
@@ -259,6 +256,8 @@ header a:hover, header button:hover {
   font-size: calc(2vw * (1/2));
 }
 
+
+.nodisp { display: none;}
 
 /* End partners */
 
