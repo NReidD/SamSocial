@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Listing</title>
+</head>
+<body>
+    <h1>New Listing</h1>
+    <form action="/organizations/:orgId/listings/new" method="POST">
+        <div>
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="EventName" required>
+        </div>
+
+        <div>
+            <label for="category">Category</label>
+            <input type="text" id="category" name="Category" required>
+        </div>
+
+        <div>
+            <label for="date">Date</label>
+            <input type="text" id="date" name="Date" required>
+        </div>
+
+        <div>
+            <label for="start">Start Time</label>
+            <input type="text" id="start" name="Start" required>
+        </div>
+
+        <div>
+            <label for="end">End Time</label>
+            <input type="text" id="end" name="End" required>
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="Description" required>
+        </div>
+
+        <button>Create</button>
+    </form>
+</body>
+</html>
