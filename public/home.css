@@ -278,6 +278,15 @@ header a:hover, header button:hover {
   height: 28vw;
   border: 2px solid black;
   border-radius: 10px;
+  padding: 3vh;
+  display: table;
+  justify-content: center;
+}
+
+/* Whatever just fix this */
+
+.org-join-text {
+  width: 60%;
 }
 
 .org-join-text p {
@@ -286,11 +295,7 @@ header a:hover, header button:hover {
 }
 
 .org-join-text h1 {
+  margin: 0;
   font-family: Verdana, sans-serif;
   font-size: 2vw;
-}
-
-.org-join-text {
-  width: 60%;
-  display: table;
 }
