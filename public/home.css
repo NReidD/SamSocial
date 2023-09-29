@@ -209,45 +209,53 @@ header a:hover, header button:hover {
   object-fit: contain;
 }
 
+.partner, .partner img {
+  transition: all 2s ease;
+}
+
 .partner p, .partner h1 {
   font-family: Verdana, sans-serif;
 }
 
-.partner1, .partner5 {
+.partner-1, .partner-5 {
   width: calc(40vw * (2/3));
   height: calc(25vw * (2/3));
   left: 14%;
-  z-index: 1;
-} .partner1 p, .partner5 p {
-  font-size: calc(1.35vw * (2/3));
-} .partner1 h1, .partner5 h1 {
+  z-index: 2;
+} .partner-1 p, .partner-5 p {
+  font-size: calc(1.1vw * (2/3));
+} .partner-1 h1, .partner-5 h1 {
   font-size: calc(2vw * (2/3));
-} .partner2, .partner4 {
+} .partner-2, .partner-4 {
   width: calc(40vw * (4/5));
   height: calc(25vw * (4/5));
   left: 20%;
-  z-index: 2;
-} .partner2 p, .partner4 p {
-  font-size: calc(1.35vw * (4/5));
-} .partner2 h1, .partner4 h1 {
-  font-size: calc(2vw * (4/5));
-} .partner3 {
-  left: 0;
-  right: 0;
   z-index: 3;
-} .partner3 p {
-  font-size: 1.35vw;
-} .partner3 h1 {
+} .partner-2 p, .partner-4 p {
+  font-size: calc(1.1vw * (4/5));
+} .partner-2 h1, .partner-4 h1 {
+  font-size: calc(2vw * (4/5));
+} .partner-3 {
+  left: calc(50% - 20vw); /* 50vw - (40 / 2) */
+  z-index: 4;
+} .partner-3 p {
+  font-size: 1.1vw;
+} .partner-3 h1 {
   font-size: 2vw;
-} .partner4 {
-  left: auto;
-  right: 20%;
-} .partner5 {
-  left: auto;
-  right: 14%;
+} .partner-4 {
+  left: calc(100% - (40vw * (4/5)) - 20%);
+} .partner-5 {
+  left: calc(100% - (40vw * (2/3)) - 14%);
+} .partner-6 {
+  width: calc(40vw * (1/2));
+  height: calc(25vw * (1/2));
+  left: calc(50% - (40vw * (1/2)));
+  z-index: 1;
+} .partner-6 p {
+  font-size: calc(1.1vw * (1/2));
+} .partner-6 h1 {
+  font-size: calc(2vw * (1/2));
 }
-
-/* MAKE UNIVERSAL */
 
 /* End partners */
 
