@@ -16,7 +16,7 @@ module.exports.showOrgs = async (req, res) => {
 
 module.exports.createOrg = async (req, res) => {
     const org = new Orgs(req.body)
-    org.Founded = format(new Date(), 'PPP')
+    org.Joined = format(new Date(), 'PPP')
     await org.save()
     res.redirect(`/organizations/${org._id}`)
 }

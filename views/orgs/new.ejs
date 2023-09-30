@@ -7,23 +7,23 @@
     </head>
     <body>
     <h1>New Post</h1>
-    <form action="/organizations/placeholder/posts/new" method="POST">
+    <form action="/organizations/create" method="POST">
     <div>
-    <label for="title">Organization Name</label>
-    <input type="text" name="Title" id="title" required>
+    <label for="Name">Organization Name</label>
+    <input type="text" name="Name" id="name" required>
     </div>
 
     <div>
-    <label for="media">Organization Image</label>
-    <input type="text" name="ProfilePic" id="ProfilePic" required>
+    <label for="ProfilePic">Organization Image</label>
+    <input type="text" name="ProfilePic" id="ProfilePic" >
     </div>
 
     <div>
-    <label for="caption">Organization Bio</label>
+    <label for="Bio">Organization Bio</label>
     <input type="text" name="Bio" id="Bio" required>
     </div>
     <div>
-    <label for="caption">Organization Category</label>
+    <label for="Category">Organization Category</label>
 
     <select name="Category" id="Category" class="form-select" required>
     <option value="World News">World News</option>
@@ -36,7 +36,7 @@
     </select>
     </div>
     <div>
-    <label for="caption">Organization Founding Date</label>
+    <label for="Founding">Organization Founding Date</label>
     <input type="text" name="Founded" id="Founded" required>
     </div>
 
