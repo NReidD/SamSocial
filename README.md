@@ -16,6 +16,7 @@ A project for the [Congressional App Challenge](https://www.congressionalappchal
 - [ ] **Replace the icons inside of the feature cards with simple, vector/png icons that match the text (e.g. a thumbs up, a heart, etc.). Preferably with blue/white theme.**
 - [X] Replace ALL images
 - [X] Maybe add border to feature cards
+- [ ] Make the buttons and links do stuff
 
 
 ## To-do list for branch `andrew`
