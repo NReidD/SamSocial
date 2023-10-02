@@ -260,3 +260,112 @@ header a:hover, header button:hover {
 /* End partners */
 
 /* Begin org-join */
+
+.org-join-bg {
+  background-image: url("images/home/old-guy.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat:no-repeat;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.org-join {
+  background-color: white;
+  width: 43vw;
+  height: 20vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 3vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Whatever just fix this */
+
+.org-join-text {
+  width: 60%;
+  height: 100%;
+  display: table;
+  text-align: center;
+}
+
+.org-join-text p {
+  font-family: Verdana, sans-serif;
+  font-size: 1.1vw;
+}
+
+.org-join-text h1 {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 2vw;
+}
+
+.org-join-text button {
+  display: table-cell;
+  margin: 2vh auto; /* Adjust margin as needed */
+  padding: 1vh 2vw; /* Adjust padding as needed */
+  background-color: #cdcdcd;
+  border: 2px solid #000000; /* Match the border style */
+  border-radius: 5px; /* Add rounded corners */
+  color: #000000;
+  font-size: 1.25vw; /* Match the font size */
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+/* End org-join */
+
+/* Begin footer */
+
+footer {
+  background-color: #5f929a;
+  height: 7vh;
+  width: 100%;
+  display: table;
+  align-items: center;
+}
+
+.footer-text {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer p {
+  display: inline-block;
+  padding: 0 2vh;
+  font-family: Verdana, sans-serif;
+  font-size: 1.75vh;
+  margin: 0;
+}
+
+footer a {
+  padding: 0 2vh;
+  display: inline-block;
+  justify-content: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.75vh;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+.app-challenge-link {
+  padding: 0;
+  display: inline-block;
+  justify-content: center;
+  color: #000000;
+  text-decoration: underline;
+  font-size: 1.75vh;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+.app-challenge-p {
+  float: right;
+}
