@@ -319,3 +319,53 @@ header a:hover, header button:hover {
 }
 
 /* End org-join */
+
+/* Begin footer */
+
+footer {
+  background-color: #5f929a;
+  height: 7vh;
+  width: 100%;
+  display: table;
+  align-items: center;
+}
+
+.footer-text {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer p {
+  display: inline-block;
+  padding: 0 2vh;
+  font-family: Verdana, sans-serif;
+  font-size: 1.75vh;
+  margin: 0;
+}
+
+footer a {
+  padding: 0 2vh;
+  display: inline-block;
+  justify-content: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.75vh;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+.app-challenge-link {
+  padding: 0;
+  display: inline-block;
+  justify-content: center;
+  color: #000000;
+  text-decoration: underline;
+  font-size: 1.75vh;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+
+.app-challenge-p {
+  float: right;
+}
