@@ -275,11 +275,11 @@ header a:hover, header button:hover {
 .org-join {
   background-color: white;
   width: 43vw;
-  height: 28vw;
+  height: 20vw;
   border: 2px solid black;
   border-radius: 10px;
   padding: 3vh;
-  display: table;
+  display: flex;
   justify-content: center;
 }
 
@@ -287,6 +287,9 @@ header a:hover, header button:hover {
 
 .org-join-text {
   width: 60%;
+  height: 100%;
+  display: table;
+  text-align: center;
 }
 
 .org-join-text p {
@@ -299,3 +302,20 @@ header a:hover, header button:hover {
   font-family: Verdana, sans-serif;
   font-size: 2vw;
 }
+
+.org-join-text button {
+  display: table-cell;
+  margin: 2vh auto; /* Adjust margin as needed */
+  padding: 1vh 2vw; /* Adjust padding as needed */
+  background-color: #cdcdcd;
+  border: 2px solid #000000; /* Match the border style */
+  border-radius: 5px; /* Add rounded corners */
+  color: #000000;
+  font-size: 1.25vw; /* Match the font size */
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+/* End org-join */
