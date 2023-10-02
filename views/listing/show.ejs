@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+</head>
+<body>
+    <h1><%= listing.EventName %></h1>
+    <p><%= listing.Category %></p>
+    <p><%= listing.Date %></p>
+    <p>Start Time: <%= listing.Start %></p>
+    <p>End Time: <%= listing.End %></p>
+    <p><%= listing.Description %></p>
+
+    <a href="/organizations/:orgId/listings/<%= listing._id %>/edit">Edit</a>
+
+    <form action="/organizations/:orgId/listings/<%= listing._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+</body>
+</html>

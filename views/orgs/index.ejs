@@ -1,0 +1,14 @@
+<a href="/organizations/create">Create</a>
+<div class="d-flex flex-wrap justify-content-center align-items-center">
+    <% for (let i = 0; i < organizations.length; i++) { %>
+        <div class="card m-3">
+            <img src="<%= organizations[i].ProfilePicture %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-1 text-body-secondary"><%= organizations[i].Category %></h6>
+              <h5 class="card-title mb-0"><%= organizations[i].Bio %></h5>
+              <p class="card-text mb-2">By <%= organizations[i].Founded %></p>
+              <a href="/organizations/<%= organizations[i]._id %>" class="btn btn-primary">Full article</a>
+            </div>
+          </div>
+    <% } %>
+</div>
