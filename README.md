@@ -12,10 +12,10 @@ A project for the [Congressional App Challenge](https://www.congressionalappchal
 - [X] Add in splash content
 - [X] Finish CSS for individual partner cards
 - [X] Make CSS / CSS animations / JS for partner card scrolling
-- [ ] Add main content
-- [ ] Replace the icons inside of the feature cards with simple, vector/png icons that match the text (e.g. a thumbs up, a heart, etc.). Preferably with blue/white theme.
-- [ ] Replace ALL images
-- [ ] Maybe add border to feature cards
+- [X] Add main content
+- [ ] **Replace the icons inside of the feature cards with simple, vector/png icons that match the text (e.g. a thumbs up, a heart, etc.). Preferably with blue/white theme.**
+- [X] Replace ALL images
+- [X] Maybe add border to feature cards
 
 
 ## To-do list for branch `andrew`
