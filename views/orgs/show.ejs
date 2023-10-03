@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Org</title>
+</head>
+<body>
+    <h1><%= org.Name %></h1>
+    <p><%= org.Category %></p>
+    <p><%= org.Bio %></p>
+    <p><%= org.Founded %></p>
+    <img src="<%= org.ProfilePicture %>" alt="">
+    <br>
+    <a href="/organizations/<%= org._id %>/edit">Edit</a>
+    <form action="/organizations/<%= org._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+</body>
+</html>

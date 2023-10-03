@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Org</title>
+</head>
+<body>
+    <form action="/organizations/<%= org._id %>/edit?_method=PUT" method="POST">
+        <div>
+            <label for="name">Organization Name</label>
+            <input type="text" name="Name" id="name" value="<%= org.Name %>">
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <input type="text" name="Category" id="category" value="<%= org.Category %>">
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <input type="text" name="Bio" id="bio" value="<%= org.Bio %>">
+        </div>
+
+        <div>
+            <label for="founded">Founded</label>
+            <input type="date" name="Founded" id="founded" value="<%= org.Founded %>">
+        </div>
+
+        <div>
+            <label for="profilepic">Profile Picture</label>
+            <input type="text" name="ProfilePicture" id="profilepic" value="<%= org.ProfilePicture %>">
+        </div>
+
+        <button>Update Organization</button>
+</body>
+</html>

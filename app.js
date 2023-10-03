@@ -7,7 +7,8 @@ const methodOverride = require('method-override')
 
 const homeRouter = require('./routers/home');
 const postRouter = require('./routers/post');
-const listingRouter = require('./routers/listing')
+const listingRouter = require('./routers/listing');
+const orgRouter = require('./routers/orgs')
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/SamSocial')
@@ -28,6 +29,7 @@ app.engine('ejs', ejsMate);
 app.use('/', homeRouter);
 app.use('/', postRouter);
 app.use('/', listingRouter)
+app.use('/', orgRouter)
 app.use(methodOverride('_method'))
 
 app.set('view engine', 'ejs');

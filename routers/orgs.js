@@ -1,19 +1,26 @@
 const express = require('express');
 const router = express.Router({mergeParams: true});
-const Orgs = require('../controllers/organization');
-router.get('/', Orgs.getOrgs)
-//get/render organization dat
-router.get('/organizations/:orgId')
-//create new organization
-router.get('/organizations/:orgId/create', Orgs.createScreen)
-//post new organization
-router.post('/organizations/:orgId/create', Orgs.createOrg)
+const Org = require('../controllers/organization')
+
+// render all orgs
+router.get('/organizations', Org.getOrgs)
+
+// render new org form
+router.get('/organizations/new', Org.getNewForm)
+// post new org
+router.post('/organizations/new', Org.createOrg)
 
 
-//send, post edit form for organization
-router.route('/organizations/:orgId/edit')
-.get(Orgs.getEdit)
-.post(Orgs.postEdit)
+// render individual org
+router.get('/organizations/:orgId', Org.getOneOrg)
 
+
+// render edit form
+router.get('/organizations/:orgId/edit', Org.getEditForm)
+// updates org
+router.put('/organizations/:orgId/edit', Org.updateOrg)
+
+// deletes org
+router.delete('/organizations/:orgId', Org.deleteOrg)
 
 module.exports = router

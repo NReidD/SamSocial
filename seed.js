@@ -11,6 +11,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/SamSocial')
         console.log(e);
     })
 
+const deleteDBs = async () => {
+    await Post.deleteMany()
+    await Organization.deleteMany()
+}
+
+deleteDBs()
+
 const createPost = async num => {
     const postArr = []
     for (let i = 0; i < num; i++) {
