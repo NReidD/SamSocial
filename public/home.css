@@ -149,7 +149,7 @@ header a:hover, header button:hover {
 }
 
 .feature-card img {
-  height: 30%;
+  height: 10vh;
 }
 
 .feature-card p {
@@ -314,7 +314,7 @@ header a:hover, header button:hover {
 .org-join {
   background-color: white;
   width: 43vw;
-  height: 20vw;
+  height: 22vw;
   border: 2px solid black;
   border-radius: 10px;
   padding: 3vh;
