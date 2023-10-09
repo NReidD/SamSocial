@@ -9,25 +9,25 @@
     <form action="/organizations/new" method="POST">
         <div>
             <label for="name">Organization Name</label>
-            <input type="text" name="Name" id="name">
+            <input type="text" name="Name" id="name" required autocomplete="off">
         </div>
         <div>
             <label for="category">Category</label>
-            <input type="text" name="Category" id="category">
+            <input type="text" name="Category" id="category" required autocomplete="off">
         </div>
         <div>
             <label for="bio">Bio</label>
-            <input type="text" name="Bio" id="bio">
+            <input type="text" name="Bio" id="bio" required autocomplete="off">
         </div>
 
         <div>
             <label for="founded">Founded</label>
-            <input type="date" name="Founded" id="founded">
+            <input type="date" name="Founded" id="founded" required autocomplete="off">
         </div>
 
         <div>
             <label for="profilepic">Profile Picture</label>
-            <input type="text" name="ProfilePicture" id="profilepic">
+            <input type="text" name="ProfilePicture" id="profilepic" required autocomplete="off">
         </div>
 
         <button>Create</button>

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Post = require('./Posts')
 const { Schema } = mongoose;
 
 
@@ -16,6 +17,10 @@ const orgSchema = new Schema({
         }
     ],
 
+})
+
+orgSchema.post('findOneAndDelete', async doc => {
+    await Post.deleteMany({_id: {$in: doc.Posts} })
 })
 
 const Organization = mongoose.model('Organization', orgSchema);

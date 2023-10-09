@@ -9,25 +9,25 @@
     <form action="/organizations/<%= org._id %>/edit?_method=PUT" method="POST">
         <div>
             <label for="name">Organization Name</label>
-            <input type="text" name="Name" id="name" value="<%= org.Name %>">
+            <input type="text" name="Name" id="name" value="<%= org.Name %>" required autocomplete="off">
         </div>
         <div>
             <label for="category">Category</label>
-            <input type="text" name="Category" id="category" value="<%= org.Category %>">
+            <input type="text" name="Category" id="category" value="<%= org.Category %>" required autocomplete="off">
         </div>
         <div>
             <label for="bio">Bio</label>
-            <input type="text" name="Bio" id="bio" value="<%= org.Bio %>">
+            <input type="text" name="Bio" id="bio" value="<%= org.Bio %>" required autocomplete="off">
         </div>
 
         <div>
             <label for="founded">Founded</label>
-            <input type="date" name="Founded" id="founded" value="<%= org.Founded %>">
+            <input type="date" name="Founded" id="founded" value="<%= org.Founded %>" required autocomplete="off">
         </div>
 
         <div>
             <label for="profilepic">Profile Picture</label>
-            <input type="text" name="ProfilePicture" id="profilepic" value="<%= org.ProfilePicture %>">
+            <input type="text" name="ProfilePicture" id="profilepic" value="<%= org.ProfilePicture %>" required autocomplete="off">
         </div>
 
         <button>Update Organization</button>

@@ -1,4 +1,11 @@
 const Org = require('../models/Organizations')
+const format = require('date-fns/format')
+
+const separateDate = date => {
+    const dateArr = date.split('-')
+    dateArr[1] = dateArr[1] - 1
+    return format(new Date(dateArr[0], dateArr[1], dateArr[2]), 'PP')
+}
 
 module.exports.getOrgs = async (req, res) => {
     const orgs = await Org.find()
@@ -11,14 +18,16 @@ module.exports.getNewForm = (req, res) => {
 
 module.exports.createOrg = async (req, res) => {
     const org = new Org(req.body)
+    org.Joined = format(new Date(), 'PP')
     await org.save()
     res.redirect(`/organizations/${org._id}`)
 }
 
 module.exports.getOneOrg = async (req, res) => {
     const { orgId } = req.params
-    const org = await Org.findById(orgId)
-    res.render('orgs/show', { org })
+    const org = await Org.findById(orgId).populate({'path': 'Posts'})
+    const founded = separateDate(org.Founded)
+    res.render('orgs/show', { org, founded })
 }
 
 module.exports.getEditForm = async (req, res) => {
@@ -30,6 +39,7 @@ module.exports.getEditForm = async (req, res) => {
 module.exports.updateOrg = async (req, res) => {
     const { orgId } = req.params
     const org = await Org.findByIdAndUpdate(orgId, req.body)
+    await org.save()
     res.redirect(`/organizations/${org._id}`)
 }
 

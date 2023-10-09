@@ -6,21 +6,22 @@
     <title>New Post</title>
 </head>
 <body>
+    <a href="/organizations/<%= orgId %>">Back to organization</a>
     <h1>New Post</h1>
-    <form action="/organizations/placeholder/posts/new" method="POST">
+    <form action="/organizations/<%= orgId %>/posts/new" method="POST">
         <div>
             <label for="title">Title</label>
-            <input type="text" name="Title" id="title" required>
+            <input type="text" name="Title" id="title" required autocomplete="off">
         </div>
 
         <div>
             <label for="media">Media</label>
-            <input type="text" name="Media" id="media" required>
+            <input type="text" name="Media" id="media" required autocomplete="off">
         </div>
 
         <div>
             <label for="caption">Caption</label>
-            <input type="text" name="Caption" id="media" required>
+            <input type="text" name="Caption" id="media" required autocomplete="off">
         </div>
 
         <button>Create</button>

@@ -6,15 +6,30 @@
     <title>Single Org</title>
 </head>
 <body>
-    <h1><%= org.Name %></h1>
+    <div>
+        <h1><%= org.Name %></h1>
+        <a href="/organizations/<%= org._id %>/posts/new">Add Post</a>
+    </div>
     <p><%= org.Category %></p>
     <p><%= org.Bio %></p>
-    <p><%= org.Founded %></p>
+    <p>Founded: <%= founded %></p>
+    <p>Joined: <%= org.Joined %></p>
     <img src="<%= org.ProfilePicture %>" alt="">
     <br>
     <a href="/organizations/<%= org._id %>/edit">Edit</a>
     <form action="/organizations/<%= org._id %>?_method=DELETE" method="POST">
         <button>Delete</button>
     </form>
+
+    <h1>Posts:</h1>
+    <% for (let i = 0; i < org.Posts.length; i++) { %>
+        <div>
+            <h3><a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>"><%= org.Posts[i].Title %></a></h3>
+            <a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>/edit">Edit</a>
+            <form action="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>?_method=DELETE" method="POST">
+                <button>Delete</button>
+            </form>
+        </div>
+    <% } %>
 </body>
 </html>
