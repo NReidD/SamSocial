@@ -1,14 +1,15 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const ExpressError = require('./utils/ExpressError')
 const ejsMate = require('ejs-mate');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 
 const homeRouter = require('./routers/home');
 const postRouter = require('./routers/post');
-const listingRouter = require('./routers/listing')
-const organizationRouter = require('./routers/orgs');
+const listingRouter = require('./routers/listing');
+const orgRouter = require('./routers/orgs')
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/SamSocial')
@@ -28,13 +29,19 @@ app.engine('ejs', ejsMate);
 
 app.use('/', homeRouter);
 app.use('/', postRouter);
-app.use('/', listingRouter);
-app.use('/', organizationRouter);
+app.use('/', listingRouter)
+app.use('/', orgRouter)
 app.use(methodOverride('_method'))
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use((err, req, res, next) => {
+    const { status = 500, message = 'something went wrong' } = err
+    res.status(status).send(message)
+})
+
 app.listen(3000, () => {
     console.log('SERVER IS LIVE');
 });

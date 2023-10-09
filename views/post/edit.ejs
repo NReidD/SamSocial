@@ -7,20 +7,20 @@
 </head>
 <body>
     <h1>Edit Post</h1>
-    <form action="/organizations/placeholder/posts/<%=post._id%>/edit?_method=PUT" method="POST">
+    <form action="/organizations/<%= org._id %>/posts/<%=post._id%>/edit?_method=PUT" method="POST">
         <div>
             <label for="title">Title</label>
-            <input type="text" name="Title" id="title" value="<%= post.Title %>" required>
+            <input type="text" name="Title" id="title" value="<%= post.Title %>" required autocomplete="off">
         </div>
 
         <div>
             <label for="media">Media</label>
-            <input type="text" name="Media" id="media" value="<%= post.Media %>" required>
+            <input type="text" name="Media" id="media" value="<%= post.Media %>" required autocomplete="off">
         </div>
 
         <div>
             <label for="caption">Caption</label>
-            <input type="text" name="Caption" id="media" value="<%= post.Caption %>" required>
+            <input type="text" name="Caption" id="media" value="<%= post.Caption %>" required autocomplete="off">
         </div>
 
         <button>Update</button>

@@ -1,16 +1,27 @@
 const express = require('express');
+const catchAsync = require('../utils/catchAsync')
 const router = express.Router({mergeParams: true});
-const Orgs = require('../controllers/organization');
+const Org = require('../controllers/organization')
 
-//create new organization
-router.get('/organizations/create', Orgs.getNewForm);
-//post new organization
-router.post('/organizations/create', Orgs.createOrg);
+// render all orgs
+router.get('/organizations', catchAsync(Org.getOrgs))
 
-router.get('/organizations', Orgs.showOrgs);
-router.get('/organizations/:orgId', Orgs.getOrg);
-//send, post edit form for organization
-router.get('/organizations/:orgId/edit', Orgs.getEditPost);
-router.post('/organizations/:orgId/edit', Orgs.updateOrg);
-router.delete('/organizations/:orgId', Orgs.deleteOrg);
+// render new org form
+router.get('/organizations/new', Org.getNewForm)
+// post new org
+router.post('/organizations/new', catchAsync(Org.createOrg))
+
+
+// render individual org
+router.get('/organizations/:orgId', catchAsync(Org.getOneOrg))
+
+
+// render edit form
+router.get('/organizations/:orgId/edit', catchAsync(Org.getEditForm))
+// updates org
+router.put('/organizations/:orgId/edit', catchAsync(Org.updateOrg))
+
+// deletes org
+router.delete('/organizations/:orgId', catchAsync(Org.deleteOrg))
+
 module.exports = router

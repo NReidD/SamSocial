@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Org</title>
-    </head>
-    <body>
-    <h1>New Org</h1>
-    <form action="/organizations/<%=org._id%>/edit?_method=POST" method="POST">
+    <title>Edit Org</title>
+</head>
+<body>
+    <form action="/organizations/<%= org._id %>/edit?_method=PUT" method="POST">
         <div>
-    <label for="title">Organization Name</label>
-    <input type="text" name="Name" id="name" value="<%= org.Name %>" required>
-    </div>
+            <label for="name">Organization Name</label>
+            <input type="text" name="Name" id="name" value="<%= org.Name %>" required autocomplete="off">
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <input type="text" name="Category" id="category" value="<%= org.Category %>" required autocomplete="off">
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <input type="text" name="Bio" id="bio" value="<%= org.Bio %>" required autocomplete="off">
+        </div>
 
-    <div>
-    <label for="media">Organization Image</label>
-    <input type="text" name="ProfilePic" id="ProfilePic" value="<%= org.ProfilePic %>"required>
-    </div>
+        <div>
+            <label for="founded">Founded</label>
+            <input type="date" name="Founded" id="founded" value="<%= org.Founded %>" required autocomplete="off">
+        </div>
 
-    <div>
-    <label for="caption">Organization Bio</label>
-    <input type="text" name="Bio" id="Bio" value="<%= org.Bio %>" required>
-    </div>
-    <div>
-    <label for="caption">Organization Category</label>
+        <div>
+            <label for="profilepic">Profile Picture</label>
+            <input type="text" name="ProfilePicture" id="profilepic" value="<%= org.ProfilePicture %>" required autocomplete="off">
+        </div>
 
-    <select name="Category" id="Category" class="form-select" value="<%= org.Category %>"required>
-    <option value="World News">World News</option>
-    <option value="Sports">Sports</option>
-    <option value="Salesian Scoop">Salesian Scoop</option>
-    <option value="Student Spotlight">Student Spotlight</option>
-    <option value="Wellness">Wellness</option>
-    <option value="Entertainment">Entertainment</option>
-    <option value="Crossword">Crossword</option>
-    </select>
-    </div>
-    <div>
-    <label for="caption">Organization Founding Date</label>
-    <input type="text" name="Founded" id="Founded" value="<%= org.Founded %>"required>
-    </div>
-
-
-    <button>Edit</button>
-    </form>
-    </body>
-    </html>
+        <button>Update Organization</button>
+</body>
+</html>
