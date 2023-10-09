@@ -6,13 +6,15 @@
     <title>Show Post</title>
 </head>
 <body>
+    <a href="/organizations/<%= org._id %>">Back to Organization</a>
     <h1><%= post.Title %></h1>
     <img src="<%= post.Media %>" alt="">
     <p><%= post.Caption %></p>
+    <p>Created: <%= post.Created %></p>
 
-    <a href="/organizations/placeholder/posts/<%= post._id %>/edit">Edit</a>
+    <a href="/organizations/<%= org._id %>/posts/<%= post._id %>/edit">Edit</a>
 
-    <form action="/organizations/placeholder/posts/<%= post._id %>?_method=DELETE" method="POST">
+    <form action="/organizations/<%= org._id %>/posts/<%= post._id %>?_method=DELETE" method="POST">
         <button>Delete</button>
     </form>
 </body>

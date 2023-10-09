@@ -7,35 +7,35 @@
 </head>
 <body>
     <h1>New Listing</h1>
-    <form action="/organizations/:orgId/listings/new" method="POST">
+    <form action="/organizations/<%= orgId %>/listings/new" method="POST">
         <div>
             <label for="eventName">Event Name</label>
-            <input type="text" id="eventName" name="EventName" required>
+            <input type="text" id="eventName" name="EventName" required autocomplete="off">
         </div>
 
         <div>
             <label for="category">Category</label>
-            <input type="text" id="category" name="Category" required>
+            <input type="text" id="category" name="Category" required autocomplete="off">
         </div>
 
         <div>
             <label for="date">Date</label>
-            <input type="text" id="date" name="Date" required>
+            <input type="text" id="date" name="Date" required autocomplete="off">
         </div>
 
         <div>
             <label for="start">Start Time</label>
-            <input type="text" id="start" name="Start" required>
+            <input type="text" id="start" name="Start" required autocomplete="off">
         </div>
 
         <div>
             <label for="end">End Time</label>
-            <input type="text" id="end" name="End" required>
+            <input type="text" id="end" name="End" required autocomplete="off">
         </div>
 
         <div>
             <label for="description">Description</label>
-            <input type="text" id="description" name="Description" required>
+            <input type="text" id="description" name="Description" required autocomplete="off">
         </div>
 
         <button>Create</button>
