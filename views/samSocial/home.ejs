@@ -9,133 +9,141 @@
 </head>
 
 <body>
+  <!-- Portrait -->
+  <div class="portrait">
+    <h1>This website is currently unavailable on your screen.</h1>
+  </div>
+
   <!-- Header -->
-  <header>
-    <button class="header-image-button" onclick="alert('make this do something');">
-      <img src="images/global/heart.png">
-    </button>
-    <div class="header-left">
-      <a href="about">About</a>
-      <a href="/organizations">Organizations</a>
-      <a href="join">Join</a>
-    </div>
-    <div class="header-right">
-      <a href="signup">Sign up</a>
-      <a href="login">Log in</a>
-      <button class="header-image-button" onclick="alert('make this do something too i guess');">
-        <img src="images/global/user-icon.png">
+  <div class="content">
+    <header>
+      <button class="header-image-button" onclick="location.href='/'">
+        <img src="images/global/heart.png">
       </button>
-    </div>
-  </header>
+      <div class="header-left">
+        <a href="about">About</a>
+        <a href="partners">Partners</a>
+        <a href="join">Join</a>
+      </div>
+      <div class="header-right">
+        <a href="signup">Sign up</a>
+        <a href="login">Log in</a>
+        <button class="header-image-button" onclick="location.href='account'">
+          <img src="images/global/user-icon.png">
+        </button>
+      </div>
+    </header>
 
-  <!-- Splash content -->
-  <img src="images/home/splash.jpg" class="splash-image">
-  <h1 class="splash-h1">Samaritan Social</h1>
+    <!-- Splash content -->
+    <img src="images/home/splash.jpg" class="splash-image">
+    <h1 class="splash-h1">Samaritan Social</h1>
 
-  <!-- Feature Cards -->
-  <div class="feature-cards-container">
-    <div class="feature-card">
-      <img src="images/global/heart.png"> <!-- CHANGE THIS -->
-      <p>As a nonprofit, we are solely dedicated to doing something blah blah blah lorem ipsum or something</p>
+    <!-- Feature Cards -->
+    <div class="feature-cards-container">
+      <div class="feature-card">
+        <img src="images/global/placeholder.png"> <!-- CHANGE THIS -->
+        <p>As a nonprofit, we are solely dedicated to making a positive impact in communities worldwide by providing support and resources to those in need. Our mission is to promote social good and create meaningful connections among individuals and organizations.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/global/placeholder.png"> <!-- CHANGE THIS -->
+        <p>Join us in our mission to make the world a better place. Whether you're an individual looking to volunteer or an organization seeking partnership opportunities, Samaritan Social is here to help you make a difference.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/global/placeholder.png"> <!-- CHANGE THIS -->
+        <p>Together, we can create positive change and build a brighter future for all. Join Samaritan Social today and be a part of something meaningful.</p>
+      </div>
     </div>
-    <div class="feature-card">
-      <img src="images/global/heart.png"> <!-- CHANGE THIS -->
-      <p>As a nonprofit, we are solely dedicated to doing something blah blah blah lorem ipsum or something</p>
+
+    <!-- Mission Statement -->
+    <div class="mission-statement">
+      <div class="mission-left">
+        <h1>Our mission</h1>
+        <p>Here at Samaritan Social, we believe that it is our mission to unite people and service organizations around the globe. We aim to connect individuals with opportunities to give back to their communities and support those in need. Our vision is a world where compassion and service are at the forefront of society, making the world a better place for all.</p>
+        <p>Join us in our mission to create positive change and promote social good. Together, we can make a significant impact and build a better future for everyone.</p>
+        <br><br>
+        <p style="float:right;">-The SamSocial Team</p>
+      </div>
+      <img src="/images/home/mission-statement.jpg">
+      <button onclick="location.href='signup'">Start today!</button>
     </div>
-    <div class="feature-card">
-      <img src="images/global/heart.png"> <!-- CHANGE THIS -->
-      <p>As a nonprofit, we are solely dedicated to doing something blah blah blah lorem ipsum or something</p>
+
+    <!-- Partners -->
+    <div class="partners-container">
+      <!-- Only have 6 partners at a time -->
+      <div class="partner partner-1">
+        <img src="images/home/ronald-mcdonald.png">
+        <div class="partner-text">
+          <h1>Ronald McDonald House (1)</h1>
+          <p>Ronald McDonald House is a charitable organization dedicated to providing a home away from home for families with seriously ill children. They offer support, comfort, and resources to these families during difficult times.</p>
+        </div>
+      </div>
+
+      <div class="partner partner-2">
+        <img src="images/home/ronald-mcdonald.png">
+        <div class="partner-text">
+          <h1>Ronald McDonald House (2)</h1>
+          <p>Ronald McDonald House is committed to making a difference in the lives of children and their families. They provide essential services and a caring environment to help families through challenging medical situations.</p>
+        </div>
+      </div>
+
+      <div class="partner partner-3">
+        <img src="images/home/ronald-mcdonald.png">
+        <div class="partner-text">
+          <h1>Ronald McDonald House (3)</h1>
+          <p>Ronald McDonald House is dedicated to supporting children's health and well-being. Their mission is to keep families close and provide comfort and care when it's needed most.</p>
+        </div>
+      </div>
+      <div class="partner partner-4">
+        <img src="images/home/ronald-mcdonald.png">
+        <div class="partner-text">
+          <h1>Ronald McDonald House (4)</h1>
+          <p>Ronald McDonald House works tirelessly to ensure that families facing medical challenges have a safe and welcoming place to stay. They are a beacon of hope and support in difficult times.</p>
+        </div>
+      </div>
+      <div class="partner partner-5">
+        <img src="images/home/ronald-mcdonald.png">
+        <div class="partner-text">
+          <h1>Ronald McDonald House (5)</h1>
+          <p>Ronald McDonald House is dedicated to making a positive impact on families' lives. They provide vital resources and a caring community for families in need.</p>
+        </div>
+      </div>
+      <div class="partner partner-6">
+        <img src="images/home/ronald-mcdonald.png">
+        <div class="partner-text">
+          <h1>Ronald McDonald House (6)</h1>
+          <p>Ronald McDonald House is a trusted partner in helping families cope with medical challenges. Their commitment to compassionate care makes a significant difference in the lives of many.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Organization Join -->
+
+    <div class="org-join-bg">
+      <div class="org-join">
+        <div class="org-join-text">
+          <h1>Looking to join?</h1>
+          <p>As an organization, you can join us as a partner by becoming part of our mission to make a positive impact in communities around the world. Whether you're a nonprofit, charity, or service organization, we welcome you to join our network of change-makers.</p>
+          <p>To join, click the button below and fill out the form. After you submit, we'll review your application and get in touch with you.</p>
+          <button onclick="location.href='signup?redirect=createorg'">Join us!</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (thank goodness I'm done) -->
+    <footer>
+      <div class="footer-text">
+        <p>&copy; 2023 Samaritan Social</p>
+        <a href="about">About</a>
+        <a href="contact">Contact us</a>
+
+        <p class="app-challenge-p">An app for the <a href="https://www.congressionalappchallenge.us/"
+            class="app-challenge-link" target="_blank">Congressional App Challenge</a>.</p>
+      </div>
+    </footer>
+
   </div>
 
-  <!-- Mission Statement -->
-  <div class="mission-statement">
-    <div class="mission-left">
-      <h1>Our mission</h1>
-      <p>Here at Samaritan Social, we believe that it is our mission to unite people and service organizations around the globe. We're going to need a nice, fat block of text here, so this is all just dummy text. Is this font too big? It's hard to tell, because I not only have chrome inspect element up half of the time, but also i'm on a super wide windows monitor. Okay yeah that was definitely too big. I should probably use this font for headers, and then change the font for this block of text. It looks good in the feature cards, though.<br>Line break?<br><br>dOuBlE lInE bReAk??<br><br>Not bad. Not bad at all.</p>
-      <p>Another P element = double line break</p>
-      <p style="float:right;">-The SamSocial Team</p>
-    </div>
-    <img src="/images/home/mission-statement.jpg">
-    <button onclick="alert('something here as well...')">Start today!</button>
-  </div>
-
-  <!-- Partners -->
-  <div class="partners-container">
-    <!-- Only have 6 partners at a time -->
-    <div class="partner partner-1">
-      <img src="images/home/ronald-mcdonald.png">
-      <div class="partner-text">
-        <h1>Ronald McDonald House (1)</h1>
-        <p>This is a really good description.<br>Line break<br><br>Double line break</p>
-      </div>
-    </div>
-    
-    <div class="partner partner-2">
-      <img src="images/home/ronald-mcdonald.png">
-      <div class="partner-text">
-        <h1>Ronald McDonald House (2)</h1>
-        <p>This is a really good description.<br>Line break<br><br>Double line break</p>
-      </div>
-    </div>
-    
-    <div class="partner partner-3">
-      <img src="images/home/ronald-mcdonald.png">
-      <div class="partner-text">
-        <h1>Ronald McDonald House (3)</h1>
-        <p>This is a really good description.<br>Line break<br><br>Double line break</p>
-      </div>
-    </div>
-    <div class="partner partner-4">
-      <img src="images/home/ronald-mcdonald.png">
-      <div class="partner-text">
-        <h1>Ronald McDonald House (4)</h1>
-        <p>This is a really good description.<br>Line break<br><br>Double line break</p>
-      </div>
-    </div>
-    <div class="partner partner-5">
-      <img src="images/home/ronald-mcdonald.png">
-      <div class="partner-text">
-        <h1>Ronald McDonald House (5)</h1>
-        <p>This is a really good description.<br>Line break<br><br>Double line break</p>
-      </div>
-    </div>
-    <div class="partner partner-6">
-      <img src="images/home/ronald-mcdonald.png">
-      <div class="partner-text">
-        <h1>Ronald McDonald House (6)</h1>
-        <p>This is a really good description.<br>Line break<br><br>Double line break</p>
-      </div>
-    </div>
-  </div>
-  <!--  For the record, there were two random
-        closing div tags here, so if something
-        breaks, that was probably it            -->
-
-  <!-- Organization Join -->
-
-  <div class="org-join-bg">
-    <div class="org-join">
-      <div class="org-join-text">
-        <h1>Looking to join?</h1>
-        <p>As an organization, you can join us as a partner by doing taskdfalskdfjoiwej iaw eirj aoiwerj ioawe jroaw ejroiawj erioj aweroi dummy text</p>
-        <p>To join, click the button below and fill out the form. After you submit, we'll review it.</p>
-        <button onclick="alert('do something here')">Join us!</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer (thank goodness i'm done) -->
-  <footer>
-    <div class="footer-text">
-      <p>&copy; 2023 Samaritan Social</p>
-      <a href="about">About</a>
-      <a href="contact">Contact us</a>
-
-      <p class="app-challenge-p">An app for the <a href="https://www.congressionalappchallenge.us/" class="app-challenge-link" target="_blank">Congressional App challenge</a>.</p>
-    </div>
-  </footer>
-
-<script src="scripts/home/script.js"></script>
+  <script src="scripts/home/script.js"></script>
 </body>
+
 </html>
