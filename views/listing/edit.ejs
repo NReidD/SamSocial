@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Edit Listing</h1>
-    <form action="/organizations/:orgId/listings/<%= listing._id %>/edit?_method=PUT" method="POST">
+    <form action="/organizations/<%= orgId %>/listings/<%= listing._id %>/edit?_method=PUT" method="POST">
         <div>
             <label for="eventName">Event Name</label>
             <input type="text" id="eventName" name="EventName" value="<%= listing.EventName %>" required autocomplete="off">

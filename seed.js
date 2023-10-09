@@ -1,5 +1,6 @@
 const Organization = require('./models/Organizations')
 const Post = require('./models/Posts')
+const Listing = require('./models/Listings')
 const format = require('date-fns/format')
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://127.0.0.1:27017/SamSocial')
@@ -14,6 +15,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/SamSocial')
 const createOrg = async num => {
     await Organization.deleteMany()
     await Post.deleteMany()
+    await Listing.deleteMany()
     for (let i = 0; i < num; i++) {
         const organization = new Organization({
             Name: 'Homeless Shelter',

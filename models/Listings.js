@@ -8,7 +8,11 @@ const listSchema = new Schema({
     Date: String,
     Start: String,
     End: String,
-    Description: String
+    Description: String, 
+    Organization: {
+        ref: 'Organization',
+        type: Schema.Types.ObjectId
+    }
 })
 
 const Listing = mongoose.model('Listing', listSchema);

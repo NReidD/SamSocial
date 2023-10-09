@@ -9,6 +9,7 @@
     <div>
         <h1><%= org.Name %></h1>
         <a href="/organizations/<%= org._id %>/posts/new">Add Post</a>
+        <a href="/organizations/<%= org._id %>/listings/new">Add Listing</a>
     </div>
     <p><%= org.Category %></p>
     <p><%= org.Bio %></p>
@@ -27,6 +28,18 @@
             <h3><a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>"><%= org.Posts[i].Title %></a></h3>
             <a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>/edit">Edit</a>
             <form action="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>?_method=DELETE" method="POST">
+                <button>Delete</button>
+            </form>
+        </div>
+    <% } %>
+
+
+    <h1>Listings:</h1>
+    <% for (let i = 0; i < org.Listings.length; i++) { %>
+        <div>
+            <h3><a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>"><%= org.Listings[i].EventName %></a></h3>
+            <a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>/edit">Edit</a>
+            <form action="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>?_method=DELETE" method="POST">
                 <button>Delete</button>
             </form>
         </div>

@@ -25,7 +25,7 @@ module.exports.createOrg = async (req, res) => {
 
 module.exports.getOneOrg = async (req, res) => {
     const { orgId } = req.params
-    const org = await Org.findById(orgId).populate({'path': 'Posts'})
+    const org = await Org.findById(orgId).populate({'path': 'Posts', 'path': 'Listings'})
     const founded = separateDate(org.Founded)
     res.render('orgs/show', { org, founded })
 }

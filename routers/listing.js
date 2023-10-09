@@ -4,7 +4,7 @@ const router = express.Router({mergeParams: true})
 const listing = require('../controllers/listing')
 
 // render new listing form
-router.get('/organizations/:orgId/listings/new', catchAsync(listing.getNewForm))
+router.get('/organizations/:orgId/listings/new', listing.getNewForm)
 // post new listing
 router.post('/organizations/:orgId/listings/new', catchAsync(listing.createListing))
 
