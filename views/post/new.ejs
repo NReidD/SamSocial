@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Post</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
+    <%- include('../partials/navbar') %>
     <a href="/organizations/<%= orgId %>">Back to organization</a>
     <h1>New Post</h1>
     <form action="/organizations/<%= orgId %>/posts/new" method="POST">

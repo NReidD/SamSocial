@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
+    <%- include('../partials/navbar') %>
+
     <h1>Edit Post</h1>
     <form action="/organizations/<%= org._id %>/posts/<%=post._id%>/edit?_method=PUT" method="POST">
         <div>
