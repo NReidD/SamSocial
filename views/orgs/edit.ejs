@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/navbar.css">
     <title>Edit Org</title>
 </head>
 <body>
+    <%- include('../partials/navbar') %>
     <form action="/organizations/<%= org._id %>/edit?_method=PUT" method="POST">
         <div>
             <label for="name">Organization Name</label>

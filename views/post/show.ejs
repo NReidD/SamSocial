@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Post</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
+    <%- include('../partials/navbar') %>
     <a href="/organizations/<%= org._id %>">Back to Organization</a>
     <h1><%= post.Title %></h1>
     <img src="<%= post.Media %>" alt="">

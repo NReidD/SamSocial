@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orgs Index</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
+    <%- include('../partials/navbar') %>
+
     <a href="/organizations/new">New Organization</a>
     <% for (let i = 0; i < orgs.length; i++) { %>
         <div>
