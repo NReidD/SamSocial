@@ -1,0 +1,69 @@
+/* generic */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* navbar */
+
+header {
+    background-color: #aaeffd;
+    height: 6vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 3px solid black;
+    margin-bottom: 3rem;
+  }
+  
+  .header-left, .header-right {
+    height: 6vh;
+  }
+  
+  .header-image-button {
+    padding: 0;
+    height: 100%;
+    border: none;
+  }
+  
+  .header-image-button img {
+    /* Make images fit into the header properly */
+    height: 70%;
+    margin: calc(6vw * 0.1);
+  }
+  
+  header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 12vw;
+    height: 6vh;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.25vw;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+  }
+  
+  .header-right a {
+    width: 7vw;
+  }
+  
+  .header-right {
+    right: 0;
+    position: absolute;
+  }
+  
+  header a, header button {
+    background-color: transparent;
+    cursor: pointer; /* Cursor styling */
+    transition: background-color 0.2s linear;
+  }
+  
+  header a:hover, header button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}

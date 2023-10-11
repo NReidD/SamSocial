@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/navbar.css">
     <title>New Listing</title>
 </head>
 <body>
+    <%- include('../partials/navbar') %>
     <h1>New Listing</h1>
     <form action="/organizations/<%= orgId %>/listings/new" method="POST">
         <div>

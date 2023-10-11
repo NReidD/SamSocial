@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="styles/home.css">
   <title>SamSocial</title>
 </head>
 
@@ -16,23 +16,7 @@
 
   <!-- Header -->
   <div class="content">
-    <header>
-      <button class="header-image-button" onclick="location.href='/'">
-        <img src="images/global/heart.png">
-      </button>
-      <div class="header-left">
-        <a href="about">About</a>
-        <a href="partners">Partners</a>
-        <a href="join">Join</a>
-      </div>
-      <div class="header-right">
-        <a href="signup">Sign up</a>
-        <a href="login">Log in</a>
-        <button class="header-image-button" onclick="location.href='account'">
-          <img src="images/global/user-icon.png">
-        </button>
-      </div>
-    </header>
+    <%- include('../partials/navbar') %>
 
     <!-- Splash content -->
     <img src="images/home/splash.jpg" class="splash-image">

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/navbar.css">
     <title>Listing</title>
 </head>
 <body>
+    <%- include('../partials/navbar') %>
+    
     <a href="/organizations/<%= orgId %>">Back to Organization</a>
     <h1><%= listing.EventName %></h1>
     <p><%= listing.Category %></p>
