@@ -8,8 +8,12 @@
       <a href="join">Join</a>
     </div>
     <div class="header-right">
-      <a href="signup">Sign up</a>
-      <a href="login">Log in</a>
+      <% if (!currentUser) { %>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+      <% } else { %>
+        <a href="/logout">Logout</a>
+      <% } %>
       <button class="header-image-button" onclick="location.href='account'">
         <img src="/images/global/user-icon.png">
       </button>
