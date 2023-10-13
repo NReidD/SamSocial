@@ -17,10 +17,12 @@
     <p>End Time: <%= listing.End %></p>
     <p><%= listing.Description %></p>
 
-    <a href="/organizations/<%= orgId %>/listings/<%= listing._id %>/edit">Edit</a>
+    <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+        <a href="/organizations/<%= orgId %>/listings/<%= listing._id %>/edit">Edit</a>
 
-    <form action="/organizations/<%= orgId %>/listings/<%= listing._id %>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
+        <form action="/organizations/<%= orgId %>/listings/<%= listing._id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+    <% } %>
 </body>
 </html>

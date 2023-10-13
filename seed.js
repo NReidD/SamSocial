@@ -18,6 +18,7 @@ const createOrg = async num => {
     await Listing.deleteMany()
     for (let i = 0; i < num; i++) {
         const organization = new Organization({
+            Admin: '6526c1828b32ef51a1b5ffc4',
             Name: 'Homeless Shelter',
             Category: 'Volunteer',
             Bio: 'The Wilmington Hope Shelter is a welcoming refuge nestled in the heart of Wilmington, Delaware. Committed to providing a safe haven for individuals facing homelessness, our shelter offers warm beds, nourishing meals, and compassionate support to those in need. With dedicated staff and a strong sense of community, we strive to empower individuals on their journey toward stability and brighter futures. Join us in our mission to bring hope, dignity, and a helping hand to those experiencing homelessness in Wilmington.',

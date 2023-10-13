@@ -14,10 +14,12 @@
     <p><%= post.Caption %></p>
     <p>Created: <%= post.Created %></p>
 
-    <a href="/organizations/<%= org._id %>/posts/<%= post._id %>/edit">Edit</a>
+    <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+        <a href="/organizations/<%= org._id %>/posts/<%= post._id %>/edit">Edit</a>
 
-    <form action="/organizations/<%= org._id %>/posts/<%= post._id %>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
+        <form action="/organizations/<%= org._id %>/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+    <% } %>
 </body>
 </html>

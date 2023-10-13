@@ -19,13 +19,14 @@ module.exports.getNewForm = (req, res) => {
 module.exports.createOrg = async (req, res) => {
     const org = new Org(req.body)
     org.Joined = format(new Date(), 'PP')
+    org.Admin = req.user._id
     await org.save()
     res.redirect(`/organizations/${org._id}`)
 }
 
 module.exports.getOneOrg = async (req, res) => {
     const { orgId } = req.params
-    const org = await Org.findById(orgId).populate('Posts').populate('Listings')
+    const org = await Org.findById(orgId).populate('Posts').populate('Listings').populate('Admin')
     const founded = separateDate(org.Founded)
     res.render('orgs/show', { org, founded })
 }
