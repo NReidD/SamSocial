@@ -4,36 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Org</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
 
     <%- include('../partials/navbar') %>
+    <% if (error && error.length) { %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%= error %>
+        
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% } %>
+
     <a href="/organizations">Back</a>
     <div>
         <h1><%= org.Name %></h1>
-        <a href="/organizations/<%= org._id %>/posts/new">Add Post</a>
-        <a href="/organizations/<%= org._id %>/listings/new">Add Listing</a>
+        <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+            <a href="/organizations/<%= org._id %>/posts/new">Add Post</a>
+            <a href="/organizations/<%= org._id %>/listings/new">Add Listing</a>
+        <% } %>
     </div>
+    <p>Admin: <%= org.Admin.username %></p>
     <p><%= org.Category %></p>
     <p><%= org.Bio %></p>
     <p>Founded: <%= founded %></p>
     <p>Joined: <%= org.Joined %></p>
     <img src="<%= org.ProfilePicture %>" alt="">
     <br>
-    <a href="/organizations/<%= org._id %>/edit">Edit</a>
-    <form action="/organizations/<%= org._id %>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
-
+    <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+        <a href="/organizations/<%= org._id %>/edit">Edit</a>
+        <form action="/organizations/<%= org._id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+    <% } %>
     <h1>Posts:</h1>
     <% for (let i = 0; i < org.Posts.length; i++) { %>
         <div>
             <h3><a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>"><%= org.Posts[i].Title %></a></h3>
+        <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
             <a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>/edit">Edit</a>
             <form action="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>?_method=DELETE" method="POST">
                 <button>Delete</button>
             </form>
+        <% } %>
         </div>
     <% } %>
 
@@ -42,11 +57,15 @@
     <% for (let i = 0; i < org.Listings.length; i++) { %>
         <div>
             <h3><a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>"><%= org.Listings[i].EventName %></a></h3>
-            <a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>/edit">Edit</a>
-            <form action="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>?_method=DELETE" method="POST">
-                <button>Delete</button>
-            </form>
+            <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+                <a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>/edit">Edit</a>
+                <form action="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>?_method=DELETE" method="POST">
+                    <button>Delete</button>
+                </form>
+            <% } %>
         </div>
     <% } %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>

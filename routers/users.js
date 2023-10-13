@@ -19,8 +19,6 @@ router.post('/register', catchAsync(async (req, res, next) => {
             // change redirect to user profile
             res.redirect('/organizations')
         })
-        // change redirect to user profile
-        res.redirect('/organizations')
     } catch (error) {
         req.flash('error', error.message)
         res.redirect('/register')

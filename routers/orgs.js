@@ -1,7 +1,7 @@
 const express = require('express');
 const catchAsync = require('../utils/catchAsync')
 const router = express.Router({mergeParams: true});
-const { isLoggedIn } = require('../middleware')
+const { isLoggedIn, isAuthor } = require('../middleware')
 const Org = require('../controllers/organization')
 
 // render all orgs
@@ -18,11 +18,11 @@ router.get('/organizations/:orgId', catchAsync(Org.getOneOrg))
 
 
 // render edit form
-router.get('/organizations/:orgId/edit', isLoggedIn, catchAsync(Org.getEditForm))
+router.get('/organizations/:orgId/edit', isLoggedIn, isAuthor, catchAsync(Org.getEditForm))
 // updates org
-router.put('/organizations/:orgId/edit', isLoggedIn, catchAsync(Org.updateOrg))
+router.put('/organizations/:orgId/edit', isLoggedIn, isAuthor, catchAsync(Org.updateOrg))
 
 // deletes org
-router.delete('/organizations/:orgId', isLoggedIn, catchAsync(Org.deleteOrg))
+router.delete('/organizations/:orgId', isLoggedIn, isAuthor, catchAsync(Org.deleteOrg))
 
 module.exports = router

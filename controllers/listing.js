@@ -20,7 +20,8 @@ module.exports.createListing = async (req, res) => {
 module.exports.getListing = async (req, res) => {
     const { listingId, orgId } = req.params
     const listing = await Listing.findById(listingId)
-    res.render('listing/show', { listing, orgId })
+    const org = await Org.findById(orgId)
+    res.render('listing/show', { listing, orgId, org })
 }
 
 module.exports.getEditForm = async (req, res) => {

@@ -11,6 +11,10 @@ const orgSchema = new Schema({
     Founded: String,
     Joined: String,
     ProfilePicture: String,
+    Admin: {
+        type: Schema.Types.ObjectId, 
+        ref: 'User'
+    },
     Posts: [
         {
             ref: 'Post',
