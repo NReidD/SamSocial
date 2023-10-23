@@ -44,4 +44,8 @@ router.get('/logout', (req, res, next) => {
     });
 }); 
 
+router.get('/users/:userId', catchAsync(async (req, res) => {
+    const { userId } = req.params
+}))
+
 module.exports = router

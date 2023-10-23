@@ -3,9 +3,8 @@
       <img src="/images/global/heart.png">
     </button>
     <div class="header-left">
-      <a href="about">About</a>
-      <a href="partners">Partners</a>
-      <a href="join">Join</a>
+      <a href="/">About</a>
+      <a href="/organizations">Organizations</a>
     </div>
     <div class="header-right">
       <% if (!currentUser) { %>
@@ -13,9 +12,9 @@
         <a href="/login">Login</a>
       <% } else { %>
         <a href="/logout">Logout</a>
+        <a href="/users/<%= currentUser._id %>" class="header-image-button">
+          <img src="/images/global/user-icon.png">
+        </a>
       <% } %>
-      <button class="header-image-button" onclick="location.href='account'">
-        <img src="/images/global/user-icon.png">
-      </button>
     </div>
 </header>
