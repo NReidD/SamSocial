@@ -1,71 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Org</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/navbar.css">
-</head>
-<body>
-
-    <%- include('../partials/navbar') %>
-    <% if (error && error.length) { %>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <%= error %>
-        
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    <% } %>
-
-    <a href="/organizations">Back</a>
-    <div>
-        <h1><%= org.Name %></h1>
-        <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
-            <a href="/organizations/<%= org._id %>/posts/new">Add Post</a>
-            <a href="/organizations/<%= org._id %>/listings/new">Add Listing</a>
-        <% } %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Organization</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+  </head>
+  <body>
+    <%- include('../partials/navbar') %> <% if (error && error.length) { %>
+    <div
+      class="alert alert-danger alert-dismissible fade show mx-3 mt-3"
+      role="alert"
+    >
+      <%= error %>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
     </div>
-    <p>Admin: <%= org.Admin.username %></p>
-    <p><%= org.Category %></p>
-    <p><%= org.Bio %></p>
-    <p>Founded: <%= founded %></p>
-    <p>Joined: <%= org.Joined %></p>
-    <img src="<%= org.ProfilePicture %>" alt="">
-    <br>
-    <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
-        <a href="/organizations/<%= org._id %>/edit">Edit</a>
-        <form action="/organizations/<%= org._id %>?_method=DELETE" method="POST">
-            <button>Delete</button>
-        </form>
     <% } %>
-    <h1>Posts:</h1>
-    <% for (let i = 0; i < org.Posts.length; i++) { %>
-        <div>
-            <h3><a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>"><%= org.Posts[i].Title %></a></h3>
+
+    <div class="container mt-5">
+      <a href="/organizations" class="btn btn-secondary mb-4">Back</a>
+
+      <div class="card p-4 shadow-sm">
+        <h1 class="card-title text-center"><%= org.Name %></h1>
+        <div class="text-center mb-4">
+          <img
+            src="<%= org.ProfilePicture %>"
+            alt="<%= org.Name %>"
+            class="img-fluid rounded"
+            style="max-width: 200px"
+          />
+        </div>
+        <p class="text-muted">Admin: <%= org.Admin.username %></p>
+        <p><strong>Category:</strong> <%= org.Category %></p>
+        <p><strong>Bio:</strong> <%= org.Bio %></p>
+        <p><strong>Founded:</strong> <%= founded %></p>
+        <p><strong>Joined:</strong> <%= org.Joined %></p>
+
         <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
-            <a href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>/edit">Edit</a>
-            <form action="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>?_method=DELETE" method="POST">
-                <button>Delete</button>
-            </form>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="/organizations/<%= org._id %>/edit" class="btn btn-warning"
+            >Edit Organization</a
+          >
+          <form
+            action="/organizations/<%= org._id %>?_method=DELETE"
+            method="POST"
+            class="d-inline"
+          >
+            <button class="btn btn-danger">Delete Organization</button>
+          </form>
+        </div>
         <% } %>
-        </div>
-    <% } %>
+      </div>
 
+      <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+      <div class="mt-4 d-flex gap-3">
+        <a
+          href="/organizations/<%= org._id %>/posts/new"
+          class="btn btn-primary"
+          >Add Post</a
+        >
+        <a
+          href="/organizations/<%= org._id %>/listings/new"
+          class="btn btn-primary"
+          >Add Listing</a
+        >
+      </div>
+      <% } %>
 
-    <h1>Listings:</h1>
-    <% for (let i = 0; i < org.Listings.length; i++) { %>
-        <div>
-            <h3><a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>"><%= org.Listings[i].EventName %></a></h3>
+      <h2 class="mt-5">Posts</h2>
+      <% if (org.Posts.length > 0) { %>
+      <div class="row g-4">
+        <% for (let i = 0; i < org.Posts.length; i++) { %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><%= org.Posts[i].Title %></h5>
+              <a
+                href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>"
+                class="btn btn-primary btn-sm mt-2"
+                >View Post</a
+              >
+            </div>
             <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
-                <a href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>/edit">Edit</a>
-                <form action="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>?_method=DELETE" method="POST">
-                    <button>Delete</button>
-                </form>
+            <div class="card-footer d-flex justify-content-between">
+              <a
+                href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>/edit"
+                class="btn btn-warning btn-sm"
+                >Edit</a
+              >
+              <form
+                action="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>?_method=DELETE"
+                method="POST"
+                class="d-inline"
+              >
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            </div>
             <% } %>
+          </div>
         </div>
-    <% } %>
+        <% } %>
+      </div>
+      <% } else { %>
+      <p class="text-muted">No posts available.</p>
+      <% } %>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-</body>
+      <h2 class="mt-5">Listings</h2>
+      <% if (org.Listings.length > 0) { %>
+      <div class="row g-4">
+        <% for (let i = 0; i < org.Listings.length; i++) { %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title text-truncate">
+                <%= org.Listings[i].EventName %>
+              </h5>
+              <a
+                href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>"
+                class="btn btn-primary btn-sm mt-2"
+                >View Listing</a
+              >
+            </div>
+            <% if (currentUser && org.Admin.equals(currentUser._id)) { %>
+            <div class="card-footer d-flex justify-content-between">
+              <a
+                href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>/edit"
+                class="btn btn-warning btn-sm"
+                >Edit</a
+              >
+              <form
+                action="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>?_method=DELETE"
+                method="POST"
+                class="d-inline"
+              >
+                <button class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <% } else { %>
+      <p class="text-muted">No listings available.</p>
+      <% } %>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
