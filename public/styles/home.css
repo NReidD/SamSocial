@@ -195,7 +195,7 @@ header a:hover, header button:hover {
   display: block;
   margin: 2vh auto; /* Adjust margin as needed */
   padding: 1vh 2vw; /* Adjust padding as needed */
-  background-color: #cdcdcd;
+  background-color: #ffc5d3;
   border: 2px solid #000000; /* Match the border style */
   border-radius: 5px; /* Add rounded corners */
   color: #000000;
@@ -346,7 +346,7 @@ header a:hover, header button:hover {
   display: table-cell;
   margin: 2vh auto; /* Adjust margin as needed */
   padding: 1vh 2vw; /* Adjust padding as needed */
-  background-color: #cdcdcd;
+  background-color: #ffc5d3;
   border: 2px solid #000000; /* Match the border style */
   border-radius: 5px; /* Add rounded corners */
   color: #000000;

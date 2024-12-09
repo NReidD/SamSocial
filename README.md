@@ -1,32 +1,9 @@
-# SamSocial
+SamSocial is a web application designed to connect users with service organizations and volunteer opportunities in their local areas. The platform aims to make it easier for individuals to find and follow organizations that align with their interests, explore the organizations’ homepages, read posts, and discover opportunities to get involved in meaningful community service. With a user-friendly interface and robust backend, SamSocial fosters connections between people who want to contribute to their communities and the organizations that need their help.
 
-A project for the [Congressional App Challenge](https://www.congressionalappchallenge.us/).
+The application provides a variety of features to enhance user engagement. Users can create secure accounts, log in and out, and view organizations of their choice. Each organization has its own dynamic homepage, displaying posts and information about upcoming service opportunities. Users can explore these posts, interact with the organization’s content, and use the platform to find volunteer activities that suit their interests. 
 
-## To-do list for branch `tyler`
+To run SamSocial locally, ensure that Node.js is installed on your machine. Install all necessary dependencies by running the `npm install` command. Once the dependencies are installed, you can start the application by running `nodemon app.js`. Open a browser and visit `http://localhost:3000` to access the site. SamSocial does not require any external configuration files, as all necessary settings, such as database connection strings, are hardcoded into the application for ease of use.
 
-- [x] Responsive heart button (hover, etc)
+The project structure is designed for clarity and modularity. The main application logic resides in the `app.js` file, which handles the setup of Express, connects to the MongoDB database, and integrates middleware for routing and error handling. Routes are stored in the `routers` folder, with each file corresponding to a specific feature, such as users, organizations, posts, or listings. Controllers in the `controllers` folder contain the logic for these routes, including data queries and processing. Mongoose schemas for the database collections are defined in the `models` folder. The `views` folder contains the EJS templates used to render the user interface, while the `public` folder houses static assets like CSS, JavaScript, and images. Utilities for error handling and other helper functions are stored in the `utils` folder.
 
-- [x] Change the font plz
-- [x] Right side of header
-- [x] Add *beautiful* README.md file for branch `tyler`
-- [X] Add in splash content
-- [X] Finish CSS for individual partner cards
-- [X] Make CSS / CSS animations / JS for partner card scrolling
-- [X] Add main content
-- [ ] **Replace the icons inside of the feature cards with simple, vector/png icons that match the text (e.g. a thumbs up, a heart, etc.). Preferably with blue/white theme.**
-- [X] Replace ALL images
-- [X] Maybe add border to feature cards
-- [ ] Make the buttons and links do stuff
-
-
-## To-do list for branch `andrew`
-
-- [X] Example task
-
-- [ ] Example task 2
-
-## To-do list for branch `Nate`
-
-- [X] Example task
-
-- [ ] Example task 2
+SamSocial is built with modern web technologies, including Node.js, Express.js, MongoDB, Mongoose, and Passport.js for authentication. The frontend relies on EJS templates and Bootstrap for visually appealing design. This combination of tools ensures that SamSocial provides a seamless experience for users while remaining scalable and maintainable for future enhancements.

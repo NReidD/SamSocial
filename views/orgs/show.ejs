@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
     <%- include('../partials/navbar') %> <% if (error && error.length) { %>
@@ -88,7 +89,7 @@
               <h5 class="card-title"><%= org.Posts[i].Title %></h5>
               <a
                 href="/organizations/<%= org._id %>/posts/<%= org.Posts[i]._id %>"
-                class="btn btn-primary btn-sm mt-2"
+                class="btn btn-pink btn-sm mt-2"
                 >View Post</a
               >
             </div>
@@ -128,7 +129,7 @@
               </h5>
               <a
                 href="/organizations/<%= org._id %>/listings/<%= org.Listings[i]._id %>"
-                class="btn btn-primary btn-sm mt-2"
+                class="btn btn-pink btn-sm mt-2"
                 >View Listing</a
               >
             </div>
